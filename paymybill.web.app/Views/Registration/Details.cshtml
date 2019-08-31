@@ -1,0 +1,61 @@
+﻿@model paymybill.web.app.Models.RegisteredBills
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RegisteredBills</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillNick)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillNick)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConsumerId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConsumerId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferenceNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReferenceNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.isActive)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.isActive)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillTypes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillTypes.id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BillCompanies)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BillCompanies.id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

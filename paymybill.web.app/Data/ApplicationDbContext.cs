@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace paymybill.web.app.Data
+namespace paymybill.web.app.Models
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public ApplicationDbContext (DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
+
+        public DbSet<paymybill.web.app.Models.RegisteredBills> RegisteredBills { get; set; }
     }
 }
